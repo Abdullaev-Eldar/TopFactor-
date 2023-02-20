@@ -153,39 +153,37 @@
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
-  } 
-  .language-item:hover{
+}
+
+.language-item:hover{
     color:  #078EEE;
-  }
-  .lang {
+}
+.lang {
     margin: 0;
     padding-left: 28px;
-  } 
+} 
 
 
 /* Section results */
+
 .section-results {
     max-width: 1920px;
-    height: 717px;
     margin: 0 auto;
 }
 .results {
-    max-height: 717px;
-    padding: 72px 0px;
+    margin: 72px 0px;
 }
 
-.results__title {
-    margin: 0px 0px 51px 0px;
-}
 .results__row {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 .results__column {
     max-width: 360px;
-   
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .item-results {
     display: flex;
@@ -201,7 +199,7 @@
     margin-bottom: 15px;
 }
 .item-results__title-limit{
-    padding-right: 100px;
+    max-width: 175px;
 }
 .item-results__text {
     padding-left: 80px;
@@ -214,29 +212,45 @@
 
 .title-block {
     position: relative;
-    font-style: normal;
+    max-width: 870px;
     font-weight: 700;
     font-size: 32px;
-    line-height: 39px;
     text-align: center;
     text-transform: uppercase;
     color: #013C66;
     padding: 0px 0px 25px 0px;
+    margin: 0 auto;
+    margin-bottom: 51px;
 }
 .title-block::after{
     content: '';
+    display: block;
     position: absolute;
     width: 320px;
     bottom: 0;
     height: 5px;
-    left: 36%;
     background-color: #74D6F8;
-    /* margin: 0px 0px 0px -55px; */
-    
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
-/* Section results */
+.results__button{
+    display: none;
+}   
 
+.results__button > button{
+    font-weight: 700;
+    font-size: 18px;
+    color: #005C9D;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.arrow-down--active{
+    transform: rotate(180deg)
+}
+/* Section results */
 
 
 /* Section invitation */
@@ -246,6 +260,7 @@
     margin: 0 auto;
     background: url("../images/invitation.jpg") 50%/cover no-repeat ;
     background-blend-mode: luminosity;
+    overflow: hidden;
 }
 .invitation__title {
     text-transform: uppercase;
@@ -263,8 +278,8 @@
     font-weight: 500;
     font-size: 30px;
     color: #FFFFFF;
-    margin: 0px 0px 45px 65px;
-    
+    padding: 0px 5px 45px 5px; 
+    margin: 0 auto;
 }
 .invitation__list {
     display: flex;
@@ -310,8 +325,9 @@
 
 .blog-webinars{
     max-width: 1920px;
-    height: 882px;
-    margin: 0 auto;;
+    /* height: 882px; */
+    height: auto;
+    margin: 0 auto;
 }
 .container-body{
     display: flex;
@@ -321,17 +337,21 @@
 .blog{
     max-width: 555px;
 }
+.blog__slider{
+    display: none;
+}
+
 .blog__content{
+    box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 25px 0px 0px 0px;
 }
-/* .blog__title, .webinars__title{
-    display: inline-block;
-} */
+
 .blog__content-item{
+    box-sizing: border-box;
     max-width: 263px;
     padding-bottom: 31px;
 }
@@ -348,6 +368,7 @@
 .title-style::after{
     content: '';
     position: absolute;
+    display: block;
     width: 100%;
     bottom: 0;
     height: 5px;
@@ -376,6 +397,7 @@
 
 .webinars{
     max-width: 555px;
+    margin-left: 10px;
 }
 
 .webinars__content{
@@ -383,7 +405,7 @@
     border: 1px solid #005C9D;
     border-radius: 5px;
     margin: 23px 0px 144px 0px;
-    /* width: 100%; */
+    width: 100%;
     height: 468px;
     display: flex;
     flex-direction: column;
@@ -394,6 +416,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* min-width: 338px; */
 }
 
 .webinars__content-text{
@@ -409,11 +432,12 @@
     font-weight: 400;
     font-size: 16px;
     color: #000000;
+    padding-left: 5px;
 }
 .line{
-    width: 439px;
+    max-width: 439px;
     border: 1px solid #74D6F8;
-    margin: 40px 0px ;
+    margin: 40px 0px;
 }
 
 .line2{
@@ -424,14 +448,35 @@
     display: flex;
     justify-content: end;
 }
+.webinars__button-style{
+    text-transform: uppercase;
+    width: 263px;
+    height: 60px;
+    border-radius: 3px;
+    background-color: #005C9D;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    border: 0;
+    cursor: pointer;
+}
+.webinars__button-style:hover{
+    background-color: #078EEE;
+}
+.webinars__button-style:active{
+    background-color: #006AB6;
+}
 
 /* Section blog-webinars */
+
+
 
 /* Section our-results */
 
 .our-results{
     max-width: 1920px;
-    height: 1080px;
     margin: 0 auto;
 }
 .results-content{
@@ -465,6 +510,11 @@
     height: 400px;
     margin: 0 auto;
 }
+
+.our__clients-slider{
+    display: none;
+}
+
 .our-clients__title{
     margin-bottom: 40px;
 }
@@ -502,6 +552,10 @@
 
 /* Section cooperation */
 
+.cooperation__slider{
+    display: none;
+}
+
 .cooperation{
     max-width: 1920px;
     height: 656px;
@@ -514,6 +568,7 @@
 }
 
 .cooperation__cards{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     margin-top: 53px;
@@ -523,13 +578,14 @@
     display: flex;
     flex-direction: column;
     width: 360px;
+    padding: 0px 10px 0px 10px;
 }
 
 .card-item__title{
     margin: 0  auto;
     position: relative;
     text-align: center;
-    width: 276px;
+    max-width: 276px;
     font-weight: 700;
     font-size: 24px;
     color: #FFFFFF;
@@ -550,8 +606,7 @@
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    padding-top: 23px;
-    padding-left: 45px;
+    padding: 23px 5px 0px 45px;
 }
 .card-item__list > ul > li {
     padding-bottom: 22px;
@@ -634,7 +689,7 @@
 }
 
 .cloumn__contact{
-    /* max-width: 263px; */
+    min-width: 263px;
 }
 .contact-list{
     display: flex;
@@ -653,6 +708,7 @@
     max-width: 229px;
     padding-bottom: 7px;
 }
+
 .mail{
     padding-bottom: 11px;
 }
@@ -672,7 +728,6 @@
     justify-content: space-between;
     padding-top: 20px;
     max-width: 230px;
-
 }
 
 .column__title{
@@ -681,11 +736,12 @@
     text-transform: uppercase;
     color: #005C9D;
     padding-top: 18px;
+    padding-bottom: 25px;
+    height: 86px;
 }
 .column__menu{
     font-weight: 400;
     font-size: 16px;
-    padding-top: 25px;
 }
 
 .column__company{
@@ -708,6 +764,33 @@
 .column__menu > ul > li:hover{
     color: #005C9D;
 }
+
+.footer-list-mobile{
+    display: none;
+}
+.company-list {
+    display: none;
+}
+.platform-list{
+    display: none;
+}
+.partners-list{
+    display: none;
+}
+.study-list{
+    display: none;
+}
+.popup-list{
+    display: none;;
+}
+.contact__footer-small{
+    display: none;
+}
+.active-img{
+    transform: rotate(90deg)
+}
+
+
 
 /* Section contact-footer */
 
